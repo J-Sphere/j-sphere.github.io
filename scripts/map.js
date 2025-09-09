@@ -5,7 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
         maxZoom: 19,
     }).addTo(map);
 
-    const gpxFiles = ['vestmannaeyjar.gpx']; // Add GPX filenames here
+    const gpxFiles = [  'Activity_Husavik.gpx',
+                        'Hike_Hverfall.gpx',
+                        'Hike_Mini_Studlagil.gpx',
+                        'Hike_Thingvellir.gpx',
+                        'Hike_Arnarvatn.gpx',
+                        'Hike_Hverir.gpx',
+                        'Hike_Reykjanes.gpx',
+                        'Hike_Vestmannaeyjar.gpx',
+                        'Hike_Bifrost.gpx',
+                        'Hike_Mini_Jokursalon.gpx',
+                        'Hike_Skaftafell.gpx',
+                        'Hike_Virkisjokull.gpx',
+                        'Hike_Grindavik.gpx',
+                        'Hike_Mini_Kviarjokull.gpx',
+                        'Hike_Svartifoss.gpx',
+                        'Hike_Hveragerdi.gpx',
+                        'Hike_Mini_Reynisfjara.gpx',
+                        'Hike_Svinafell.gpx',
+                        'Run_Bogarnes.gpx',
+                        'Run_Vestmannaeyjar.gpx',
+                      ]; // Add GPX filenames here
 
     const gpxList = document.getElementById('gpx-list');
 
