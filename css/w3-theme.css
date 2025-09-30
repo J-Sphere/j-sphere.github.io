@@ -1,0 +1,240 @@
+.w3-theme-blue {color:#fff !important; background-color:#336699 !important}
+.w3-theme-yellow {color:#fff !important; background-color:#998d33 !important}
+.w3-theme-red {color:#fff !important; background-color:#99334d !important}
+.w3-theme-green {color:#fff !important; background-color:#339966 !important}
+.w3-theme-brown {color:#fff !important; background-color:#995a33 !important}
+.w3-theme-lyellow {color:#000 !important; background-color:#ccc788 !important}
+.w3-theme-purple {color:#fff !important; background-color:#c488cc !important}
+.w3-theme-dpurple {color:#fff !important; background-color:#4a334d !important}
+
+
+/* .w3-theme-light {color:#000 !important; background-color:#e9fffd !important} */
+.w3-theme-light {color:#000 !important; background-color:#ffffff !important}
+.w3-theme-dark {color:#fff !important; background-color:#004a43 !important}
+.w3-theme-action {color:#fff !important; background-color:#004a43 !important}
+
+.w3-theme {color:#fff !important; background-color:#336699 !important}
+.w3-text-theme {color:#009688 !important}
+.w3-text-blue {color:#336699 !important}
+.w3-text-red {color:#99334d !important}
+.w3-text-green {color:#339966 !important}
+
+.w3-border-theme {border-color:#009688 !important}
+
+.w3-hover-theme:hover {color:#fff !important; background-color:#336699 !important}
+.w3-hover-text-theme:hover {color:#009688 !important}
+.w3-hover-border-theme:hover {border-color:#009688 !important}
+
+body {
+	max-width: 1400px;
+	margin: 0 auto !important;
+	float: none !important;
+}
+
+a:link {
+  color:#336699;
+  text-decoration: none;
+}
+
+a:visited {
+  color:#336699;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#336699;
+  text-decoration: underline;
+}
+
+a:active {
+  color:#336699;
+  text-decoration: underline;
+}
+
+.footer {position: fixed;  bottom: 0;  width: 100%;  background-color: white;  color: #336699; text-align: left;}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Left-aligned section inside the top navigation */
+.topnav-left {
+  float: left;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .col {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+       }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .col {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+       }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .col {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+       }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .col {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+       }
+}
+/* Roboto regular */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../webfonts/Roboto-Regular.eot");
+    src: url("../webfonts/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+         url("../webfonts/Roboto-Regular.woff2") format('woff2'),
+         url("../webfonts/Roboto-Regular.woff") format('woff'),
+         url("../webfonts/Roboto-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Roboto bold */
+
+@font-face {
+    font-family: "Roboto";
+    src: url('../webfonts/Roboto-Bold.eot');
+    src: url('../webfonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/Roboto-Bold.woff2') format('woff2'),
+         url('../webfonts/Roboto-Bold.woff') format('woff'),
+         url('../webfonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Roboto italic */
+
+@font-face {
+    font-family: "Roboto";
+    src: url('../webfonts/Roboto-Italic.eot');
+    src: url('../webfonts/Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/Roboto-Italic.woff2') format('woff2'),
+         url('../webfonts/Roboto-Italic.woff') format('woff'),
+         url('../webfonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Style the Image Used to Trigger the Modal */
+.modal-image {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%; /* Maximum width of the image */
+  max-height: 80vh; /* Maximum height of the image */
+  width: auto; /* Allows the image to scale based on its natural width */
+  height: auto; /* Allows the image to scale based on its natural height */
+  object-fit: contain; /* Ensures the image fits within the container, preserving its aspect ratio */
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect for navigation buttons */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 600px) {
+    #map {
+        height: 300px;
+    }
+}
+
+.geeks {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.geeks img {
+    transition: 0.5s all ease-in-out;
+}
+
+.geeks:hover img {
+    transform: scale(1.1);
+}
