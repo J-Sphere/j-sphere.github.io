@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -23,4 +23,58 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+} */
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+.geeks {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.geeks img {
+    transition: 0.5s all ease-in-out;
+}
+
+.geeks:hover img {
+    transform: scale(1.1);
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("images/slide/E7D_0004.jpeg");
+    min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+.w3-sidebar {
+    z-index: 3;
+    width: 300px;
+    top: 50px;
+    bottom: 24px;
+    height: inherit;
+}
+.w3-bar {
+    z-index: 3;
+    max-width: 1400px;
+}
+* {
+    box-sizing: border-box;
 }

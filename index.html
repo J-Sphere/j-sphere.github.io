@@ -11,59 +11,9 @@
     <link rel="stylesheet" href="css/w3-theme.css">
     <link rel="stylesheet" href="css/w3-slide.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/image-viewer.css">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-    body, html {
-      height: 100%;
-      color: #777;
-      line-height: 1.8;
-    }
-
-    .geeks {
-      overflow: hidden;
-      margin: 0 auto;
-    }
-
-    .geeks img {
-      transition: 0.5s all ease-in-out;
-    }
-
-    .geeks:hover img {
-      transform: scale(1.1);
-    }
-
-
-    /* Create a Parallax Effect */
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    /* First image (Logo. Full height) */
-    .bgimg-1 {
-      background-image: url("images/california/E7D_0004.jpeg");
-      min-height: 100%;
-    }
-
-    .w3-wide {letter-spacing: 10px;}
-    .w3-hover-opacity {cursor: pointer;}
-
-    .w3-sidebar {
-      z-index: 3;
-      width: 300px;
-      top: 50px;
-      bottom: 24px;
-      height: inherit;
-    }
-    .w3-bar {
-      z-index: 3;
-      max-width: 1400px;
-    }
-    * {
-      box-sizing: border-box;
-    }
 
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1400px) {
@@ -93,28 +43,57 @@
   </div>
 
   <!-- Website Content -->
+
+  <!-- Hidden Fullscreen Viewer -->
+  <div id="viewer">
+    <div id="viewer-content">
+      <div>
+        <img id="viewer-img" src="" alt="">
+        <div id="viewer-thumbs"></div>
+      </div>
+
+      <div id="info-panel">
+        <h2 id="info-title"></h2>
+        <p id="info-desc"></p>
+      </div>
+    </div>
+
+    <!-- Zoom controls -->
+    <div id="controls">
+      <button class="zoom-btn" id="zoom-in">+</button>
+      <button class="zoom-btn" id="zoom-out">−</button>
+    </div>
+  </div>
+
+  <!-- Header Row -->
+  <div class="w3-row w3-padding-16">
+    <div class="w3-container">
+      <br>
+    </div>
+  </div>
+
   <!-- Slideshow container -->
   <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 4</div>
-        <img src="images/slide/E7D_0004.jpeg" style="width:100%">
+      <img class="thumb" src="images/slide/E7D_0004.jpeg" data-full="images/slide/E7D_0004.jpeg" data-title="Hummingbird" data-desc="UCSC Arboretum & Botanic Garden, Santa Cruz, CA" style="width:100%">
       <div class="text w3-left-align"> Hummingbird, UCSC Arboretum & Botanic Garden, Santa Cruz, CA</div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext">2 / 4</div>
-        <img src="images/slide/E7D_0242.jpeg" style="width:100%">
+      <img class="thumb" src="images/slide/E7D_0242.jpeg" data-full="images/slide/E7D_0242.jpeg" data-title="Joshua Tree" data-desc="Joshua Tree National Park, CA" style="width:100%">
       <div class="text w3-left-align"> Joshua Tree National Park, CA</div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext">3 / 4</div>
-        <img src="images/slide/E7D_1365.jpeg" style="width:100%">
+        <img class="thumb" src="images/slide/E7D_1365.jpeg" data-full="images/slide/E7D_1365.jpeg" data-title="Sólfar" data-desc="Sólfar, Reykjavik, Iceland" style="width:100%">
       <div class="text w3-left-align"> Sólfar, Reykjavik, Iceland</div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext">4 / 4</div>
-        <img src="images/slide/E7D_1510.jpeg" style="width:100%">
+        <img class="thumb" src="images/slide/E7D_1510.jpeg" data-full="images/slide/E7D_1510.jpeg" data-title="Bruarfoss" data-desc="Bruarfoss, Iceland" style="width:100%">
       <div class="text w3-left-align"> Bruarfoss, Iceland</div>
     </div>
 
@@ -131,84 +110,58 @@
     <span class="dot" onclick="currentSlide(4)"></span>
   </div> 
 
-  <!-- Java script for static slides -->
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-
-    // Add event listener for keyboard navigation
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'ArrowLeft') {
-        plusSlides(-1); // Go to the previous slide
-      } else if (event.key === 'ArrowRight') {
-        plusSlides(1); // Go to the next slide
-      }
-    });
-  </script>
 
   <!-- Header Row -->
   <div class="w3-row w3-padding-16">
     <div class="w3-container">
-    <h2 class="w3-text-green">A website from and about Jakob Hein (not the <a href="http://www.jakobhein.de/aktuell.php">author</a>)</h2>
+    <h2 class="w3-text-green">A website from and about Jakob Hein the astrophysicist (in training), not the <a href="http://www.jakobhein.de/aktuell.php">author.</a></h2>
     </div>
   </div>
 
   <!-- First Row -->
   <div class="w3-row w3-padding-16">
-    <div class="w3-third w3-padding-16 w3-container">
+    <div class="w3-quarter w3-padding-16 w3-container">
      <div class="w3-container w3-border">
-      <h1 class="w3-text-green">&nbsp;<i class="fas fa-travel"></i>&nbsp;Content</h1>
-      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
+      <h1 class="w3-text-green">&nbsp;<i class="fas fa-travel"></i>&nbsp;Welcome! </h1>
+      <p> This page features a few of my projects and interests. 
+        It is still under construction. 
+        Please be aware that some links may not work yet and some pages may look unfinished!<br>
      </div>
     </div>
-    <div class="w3-third w3-padding-16 w3-container">
+    <div class="w3-quarter w3-padding-16 w3-container">
       <div class="w3-card-1">
         <div class="w3-container">
-          <a href="pages/map.html"></a></p><div class="geeks"><a href="pages/map.html"><img class="w3-padding w3-image" src="images/iceland2025/E7D_1633.jpeg" alt="Iceland, puffin"></a></div><p></p>
-          <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
+          <a href="pages/astro.html"></a></p><div class="geeks"><a href="pages/astro.html"><img class="w3-padding w3-image" src="images/california/IMG_7363_lores.jpeg" alt="California, death valley"></a></div><p></p>
+          <p> If you are looking for some astrophysics, check out this page. <br>
         </div>
       </div>
     </div>
-    <div class="w3-third w3-padding-16 w3-container">
+    <div class="w3-quarter w3-padding-16 w3-container">
       <div class="w3-card-1">
         <div class="w3-container">
-          <a href="pages/astro.html"></a></p><div class="geeks"><a href="pages/astro.html"><img class="w3-padding w3-image" src="images/california/IMG_7363.jpeg" alt="California, death valley"></a></div><p></p>
-          <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
+          <a href="pages/map.html"></a></p><div class="geeks"><a href="pages/map.html"><img class="w3-padding w3-image" src="images/iceland2025/E7D_1633_lores.jpeg" alt="Iceland, puffin"></a></div><p></p>
+          <p> If you want to are looking for some very specific travel advice, check out this page. <br>
+        </div>
+      </div>
+    </div>
+    <div class="w3-quarter w3-padding-16 w3-container">
+      <div class="w3-card-1">
+        <div class="w3-container">
+          <a href="pages/photography.html"></a></p><div class="geeks"><a href="pages/photography.html"><img class="w3-padding w3-image" src="images/california/E7D_0242_lores.jpeg" alt="California, death valley"></a></div><p></p>
+          <p> If you are looking for some nice photography, check out this page. <br>
         </div>
       </div>
     </div>
   </div>
 
+  
+
   <!-- Second Row -->
-  <div class="w3-row w3-padding-16">
+  <!-- <div class="w3-row w3-padding-16">
     <div class="w3-third w3-padding-16 w3-container">
       <div class="w3-card-1">
         <div class="w3-container">
-          <a href="pages/map.html"></a></p><div class="geeks"><a href="pages/map.html"><img class="w3-padding w3-image" src="images/iceland2025/E7D_1633.jpeg" alt="Iceland, puffin"></a></div><p></p>
+          <a href="pages/map.html"></a></p><div class="geeks"><a href="pages/map.html"><img class="w3-padding w3-image" src="images/iceland2025/E7D_1633_lores.jpeg" alt="Iceland, puffin"></a></div><p></p>
           <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
         </div>
       </div>
@@ -222,13 +175,17 @@
     <div class="w3-third w3-padding-16 w3-container">
       <div class="w3-card-1">
         <div class="w3-container">
-          <a href="pages/astro.html"></a></p><div class="geeks"><a href="pages/astro.html"><img class="w3-padding w3-image" src="images/california/IMG_7363.jpeg" alt="California, death valley"></a></div><p></p>
+          <a href="pages/astro.html"></a></p><div class="geeks"><a href="pages/astro.html"><img class="w3-padding w3-image" src="images/california/IMG_7363_lores.jpeg" alt="California, death valley"></a></div><p></p>
           <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </div> -->
+
+  <!-- Java scripts for image viewing and slideshow -->
+  <script src="scripts/image-viewer.js"></script>
+  <script src="scripts/image-slideshow.js"></script>
+</body> 
 
 <!-- Footer -->
 <footer class="w3-center w3-padding-16 w3-opacity w3-hover-opacity-off">

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photography</title>
+    <meta name="description" content="A collection of photographs">
+    <meta name="keywords" content="astrophysics, cycling, running"><meta charset="UTF-8">
+    <link rel="icon" type="../images/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/w3-theme.css">
+    <link rel="stylesheet" href="../css/w3-slide.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/image-viewer.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1400px) {
+      .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+    </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-left-align w3-large w3-theme-green" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-text-white w3-theme-green" href="javascript:void(0)" onclick="w3_openbar()"><i class="fa fa-bars"></i></a>
+      <div class="topnav-left">
+        <a href="../index.html" class="w3-bar-item w3-button w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fas fa-house"></i> home</a>
+      </div>
+      <div class="topnav-right">
+        <a href="../pages/astro.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-star"></i> astrophysics</a>
+        <a href="../pages/photography.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-camera"></i> photography</a>
+        <a href="../pages/map.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-plane"></i> travel</a>
+        <a href="../pages/about.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-plus"></i> about</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website Content -->
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img class="thumb" src="../images/slide/E7D_0004.jpeg" data-full="../images/slide/E7D_0004.jpeg" data-title="Hummingbird" data-desc="UCSC Arboretum & Botanic Garden, Santa Cruz, CA" style="width:100%">
+      <div class="text w3-left-align"> Hummingbird, UCSC Arboretum & Botanic Garden, Santa Cruz, CA</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img class="thumb" src="../images/slide/E7D_0242.jpeg" data-full="../images/slide/E7D_0242.jpeg" data-title="Joshua Tree" data-desc="Joshua Tree National Park, CA" style="width:100%">
+      <div class="text w3-left-align"> Joshua Tree National Park, CA</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+        <img class="thumb" src="../images/slide/E7D_1365.jpeg" data-full="../images/slide/E7D_1365.jpeg" data-title="Sólfar" data-desc="Sólfar, Reykjavik, Iceland" style="width:100%">
+      <div class="text w3-left-align"> Sólfar, Reykjavik, Iceland</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+        <img class="thumb" src="../images/slide/E7D_1510.jpeg" data-full="../images/slide/E7D_1510.jpeg" data-title="Bruarfoss" data-desc="Bruarfoss, Iceland" style="width:100%">
+      <div class="text w3-left-align"> Bruarfoss, Iceland</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div> 
+
+  <!-- FULLSCREEN VIEWER -->
+  <div id="viewer">
+    <div id="viewer-content">
+      <div>
+        <img id="viewer-img" src="" alt="">
+        <div id="viewer-thumbs"></div>
+      </div>
+
+      <div id="info-panel">
+        <h2 id="info-title"></h2>
+        <p id="info-desc"></p>
+      </div>
+    </div>
+
+    <!-- Zoom controls -->
+    <div id="controls">
+      <button class="zoom-btn" id="zoom-in">+</button>
+      <button class="zoom-btn" id="zoom-out">−</button>
+    </div>
+  </div>
+
+  <!-- Java scripts for image viewing and slideshow -->
+  <script src="../scripts/image-viewer.js"></script>
+  <script src="../scripts/image-slideshow.js"></script>
+</body> 
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-16 w3-opacity w3-hover-opacity-off">
+  <a href="../pages/impressum.html">Impressum/Imprint</a><br>
+  <a href="../pages/datenschutz.html">Datenschutz/Privacy Policy</a></p>
+</footer>
+</html>
