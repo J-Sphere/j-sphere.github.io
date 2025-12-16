@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>photography</title>
+    <title>astrophysics</title>
     <meta name="description" content="A collection of photographs">
     <meta name="keywords" content="astrophysics, cycling, running"><meta charset="UTF-8">
     <link rel="icon" type="../images/x-icon" href="../images/favicon.ico">
@@ -22,25 +22,26 @@
         min-height: 400px;
       }
     }
+    /* Sidebar layout */
+    .content-main { margin-left:220px; padding:16px; }
+    .site-sidebar { width:200px; padding-top:20px; position:fixed; left:0; top:0; height:100vh; overflow:auto; }
+    @media (max-width:600px) { .site-sidebar { display:none; } .content-main { margin-left:0; } }
     </style>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar w3-left-align w3-large w3-theme-green" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-text-white w3-theme-green" href="javascript:void(0)" onclick="w3_openbar()"><i class="fa fa-bars"></i></a>
-      <div class="topnav-left">
-        <a href="../index.html" class="w3-bar-item w3-button w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fas fa-house"></i> home</a>
-      </div>
-      <div class="topnav-right">
-        <a href="../pages/astro.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-star"></i> astrophysics</a>
-        <a href="../pages/photography.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-camera"></i> photography</a>
-        <a href="../pages/map.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-plane"></i> travel</a>
-        <a href="../pages/about.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-text-white w3-large w3-theme-green" style="text-decoration: none;"><i class="fa fa-plus"></i> about</a>
-      </div>
-    </div>
+  <!-- Sidebar navigation -->
+  <div class="w3-bar-block w3-theme-gray w3-large site-sidebar">
+    <a href="../index.html" class="w3-bar-item w3-button w3-text-white" style="text-decoration:none;"><i class="fas fa-house"></i> Home</a>
+    <a href="#research" class="w3-bar-item w3-button w3-text-white" style="text-decoration:none;"><i class="fa fa-star"></i> Research</a>
+    <a href="#outreach" class="w3-bar-item w3-button w3-text-white" style="text-decoration:none;"><i class="fa fa-users"></i> Outreach</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-white" style="text-decoration:none;"><i class="fa fa-envelope"></i> Contact</a>
   </div>
+
+  <div class="content-main">
+    <section id="research" class="w3-container w3-padding-16">
+      <h2>Research Highlights</h2>
+    </section>
 
   <!-- Website Content -->
   <div id="viewer">
@@ -64,19 +65,22 @@
   </div>
 
   <!-- Content here -->
+
+  <!-- Vertical image at the left side -->
+  <!-- left image removed; navigation moved to sidebar -->
+
+  <!-- Scrollable content on the right side-->
+
+
+
+
   <!-- First Row -->
   <div class="w3-row w3-padding-16">
     <div class="w3-third w3-padding-16 w3-container">
-     <div class="w3-container w3-border">
-      <h1 class="w3-text-green">&nbsp;<i class="fas fa-travel"></i>&nbsp;Content</h1>
-      <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
-     </div>
-    </div>
-    <div class="w3-third w3-padding-16 w3-container">
       <div class="w3-card-1">
         <div class="w3-container">
-          <a href="astro/mcrt.html"></a></p><div class="geeks"><a href="astro/mcrt.html"><img class="w3-padding w3-image" src="../images/astro/mcrt_snap.jpg" alt="Monte Carlo Radiation Transport"></a></div><p></p>
-          <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
+          <a href="astro/mcrt.html"></a></p><div class="geeks"><a href="astro/mcrt.html"><img class="w3-padding w3-image" src="../images/astro/monaco_lego.jpg" alt="Monte Carlo Radiation Transport"></a></div><p></p>
+          <p> MONACO - Monte Carlo Neutrino Advection Code <br>
         </div>
       </div>
     </div>
@@ -84,22 +88,85 @@
       <div class="w3-card-1">
         <div class="w3-container">
           <a href="astro/ndsa.html"></a></p><div class="geeks"><a href="astro/ndsa.html"><img class="w3-padding w3-image" src="../images/astro/mcrt_snap.jpg" alt="Neutrino Diffusive Shock Acceleration"></a></div><p></p>
-          <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br>
+          <a href="astro/ndsa.html"></a></p><div class="geeks"><a href="astro/ndsa.html"><img class="w3-padding w3-image" src="../videos/astro/particle_animation_high.gif" alt="Neutrino Diffusive Shock Acceleration"></a></div><p></p>
+          <p> Diffusive Shock Acceleration of Neutrinos in Core-Collapse Supernovae <br>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-padding-16 w3-container">
+      <div class="w3-card-1">
+        <div class="w3-container">
+          <a href="astro/ndsa.html"></a></p><div class="geeks"><a href="astro/ndsa.html"><img class="w3-padding w3-image" src="../images/astro/wendelstein.jpg" alt="Neutrino Diffusive Shock Acceleration"></a></div><p></p>
+          <p> GRMHD Simulation of an accretion disk <br>
         </div>
       </div>
     </div>
   </div>
 
+    </section>
 
+    <section id="outreach" class="w3-container w3-padding-16">
+      <h2>Outreach</h2>
+
+      <!-- Content about Outreach -->
+      <div class="w3-row w3-padding-16">
+        <div class="w3-third w3-padding-16 w3-container">
+          <div class="w3-card-1">
+            <div class="w3-container">
+              <img class="w3-padding w3-image" src="../images/astro/planetarium.jpg" alt="Monte Carlo Radiation Transport">
+              <p> Visit us at the <a href="https://www.mpa-garching.mpg.de/69445/Planetarium">MPA Planetarium.</a> <br> 
+              Image Credit: Maja Lujan Niemeyer
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-third w3-padding-16 w3-container">
+          <div class="w3-card-1">
+            <div class="w3-container">
+              <img class = w3-padding w3-image src="https://www.mpa-garching.mpg.de/144741/header_image-1433767263.webp?t=eyJ3aWR0aCI6MTY5NiwiZmlsZV9leHRlbnNpb24iOiJ3ZWJwIiwib2JqX2lkIjoxNDQ3NDF9--f7757289db5b0576d3ec2f1d28b8dfaa3a09a4eb" alt="Girls Day">
+              <p> <a href="https://www.mpa-garching.mpg.de/28563/Girls_Day">Girl's Day at MPA</a> <br> 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-third w3-padding-16 w3-container">
+          <div class="w3-card-1">
+            <div class="w3-container">
+              <!-- <a href="astro/ndsa.html"></a></p><div class="geeks"><a href="astro/ndsa.html"><img class="w3-padding w3-image" src="../images/astro/wendelstein.jpg" alt="Neutrino Diffusive Shock Acceleration"></a></div><p></p>
+              <p> GRMHD Simulation of an accretion disk <br> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+    </section>
+
+    <section id="contact" class="w3-container w3-padding-16">
+      <h2>Contact</h2>
+      <p><i class="fa fa-envelope"></i> jhein_at_mpa-garching.mpg.de </p>
+      <p>
+        Max Planck Insititute for Astrophysics Garching <br>
+        Karl-Schwarzschild-Str. 1  <br>
+        85748 Garching <br>
+        Germany<br>
+       </p>
+    </section>
+
+
+
+  <!-- Java scripts for image viewing and slideshow -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-padding-16 w3-opacity w3-hover-opacity-off">
+    <a href="../pages/impressum.html">Impressum/Imprint</a><br>
+    <a href="../pages/datenschutz.html">Datenschutz/Privacy Policy</a>
+  </footer>
 
   <!-- Java scripts for image viewing and slideshow -->
   <script src="../scripts/image-viewer.js"></script>
   <script src="../scripts/image-slideshow.js"></script>
-</body> 
-
-<!-- Footer -->
-<footer class="w3-center w3-padding-16 w3-opacity w3-hover-opacity-off">
-  <a href="../pages/impressum.html">Impressum/Imprint</a><br>
-  <a href="../pages/datenschutz.html">Datenschutz/Privacy Policy</a></p>
-</footer>
+</body>
 </html>
