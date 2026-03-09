@@ -1,0 +1,70 @@
+.hero {
+    height: 100vh;
+    background-image: url("../../images/iceland2025/E7D_1987.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+.invite-card {
+    height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:#f5f5f5;
+}
+
+.invite-inner {
+    max-width:350px;
+}
+
+.invite-inner h1{
+    letter-spacing:3px;
+}
+
+.photo-overlay{
+    position:absolute;
+    bottom:30px;
+    left:30px;
+    color:white;
+    font-size:30px;
+    text-shadow:0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1400px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+/* Sidebar layout */
+.content-main { margin-left:220px; padding:16px; }
+.site-sidebar { width:200px; padding-top:20px; position:fixed; left:0; top:0; height:100vh; overflow:auto; }
+@media (max-width:600px) { .site-sidebar { display:none; } .content-main { margin-left:0; } }
+
+
+#map {
+    height: 500px;
+    width: 75%;
+    float: right;
+}
+#sidebar {
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+
+.image-flip-lr {
+    transform: scaleX(-1);
+}
+
+.image-flip-ud {
+    transform: scaleY(-1);
+}
+
+.imgage-round {
+    border-radius: 50%;
+}
+
+
