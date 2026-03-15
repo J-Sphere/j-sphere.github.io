@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Sara und Jakob</title>
+  <link rel="icon" type="../../images/x-icon" href="../../image/wedding/heart.ico">
   <link rel="stylesheet" href="../../css/w3.css">
   <link rel="stylesheet" href="../../css/w3-theme.css">
   <link rel="stylesheet" href="../../css/wedding.css">
-  <link rel="stylesheet" href="../../css/leaflet.css">
   <!-- from https://unpkg.com/leaflet/dist/leaflet.css -->
+  <link rel="stylesheet" href="../../css/leaflet.css"> 
 </head>
 
 <body>
@@ -18,6 +19,7 @@
     <a href="#location" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Hochzeitslocation</a>
     <a href="#celebration" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Sektempfang & Feier</a>
     <a href="#schedule" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Ablauf</a>
+    <a href="#rsvp" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Rückmeldung</a>
     <a href="#contact" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-envelope"></i> Kontakt</a>
   </nav>
   
@@ -51,7 +53,17 @@
           <div class="w3-card-1">
             <div class="w3-container">
               <img class="w3-padding w3-image" src="../../images/wedding/kapelle.jpg" alt="Maximilanskapelle">
-              <p> Maximilanskapelle, Neues Schloss Schleißheim</p>
+              Maximilanskapelle, Neues Schloss Schleißheim<br>
+              Anreise mit dem Auto<br>
+                Parkplätze gibt es an der Schlosswirtschaft
+              Anreise mit dem ÖPNV<br>
+                S-Bahn: S1 Richtung Freising/Flughafen, Haltestelle Oberschleißheim<br>
+                Bus: 292 Richtung Garching-Forschungszentrum, Haltestelle Oberschleißheim Schloss<br>  
+                Zu Fuß von der S-Bahn Station Oberschleißheim braucht man etwa 20min.<br>  
+              Anreise zu Fuß aus Lustheim<br>
+                Durch den Schlosspark, vorbei am Schloss Lustheim<br>
+              Anreise mit dem Helikopter<br>
+                Flugplatz Schleißheim hat einen Hubschrauberlandeplatz, der nur wenige Minuten von der Kapelle entfernt ist
             </div>
           </div>
         </div>
@@ -59,7 +71,7 @@
           <div class="w3-card-1">
             <div class="w3-container">
               <!-- Karte mit dem Schloss markiert -->
-              <div id="map"></div>
+              <!-- <div id="map"></div> -->
             </div>
           </div>
         </div>
@@ -86,20 +98,82 @@
     <section id="schedule" class="content-main w3-container">
       <h2>Ablauf</h2>
       <div class="w3-row">
+        <div class="w3-half w3-container">
+          Ablauf am Hochzeitstag<br><br>  
+          14:00 Uhr - Trauung in der Maximilanskapelle<br>
+          15:00 Uhr - Sektempfang im Schlosspark<br>
+          16:00 Uhr - Gruppenfotos im Schlosspark<br>
+          17:00 Uhr - Fahrt zum Restaurant Kurfürst<br>
+          18:00 Uhr - Abendessen und Feier im Restaurant Kurfürst<br>
+          00:00 Uhr - Ende der Feier<br>
+        </div>
       </div>
     </section>
 
 
-    <!-- Detailed Schedule -->
+    <!-- Rueckmeldung -->
+    <section id="rsvp" class="content-main w3-container">
+      <h2>Rückmeldung</h2>
+
+      <div id="rsvp" class="w3-row">
+        <div class="w3-container">
+          <div class="w3-card w3-padding w3-dark-grey">
+            <h3 class="w3-left-align">Rückmeldung online abgeben</h3>
+            <p id="error" class="w3-text-red"></p>
+            <form id="rsvpForm">
+              <div id="codeArea">
+                Code auf der Einladung<br>
+                <input id="code" class="w3-input w3-border">
+                <button id="checkCode" type="submit" class="w3-button w3-margin-top w3-black">
+                  Check Code
+                </button>
+              </div>
+              <div id="formArea" style="display:none">
+                <div id="guestList" class="w3-margin-bottom"></div>
+                <br><br>
+                Vegetarisch / Vegan / etc. ?
+                <input id="diet" class="w3-input w3-border">
+                Musikwünsche
+                <input id="music" class="w3-input w3-border">
+                Anmerkungen
+                <textarea id="notes" class="w3-input w3-border"></textarea>
+                <br>
+                <button id="confirmRSVP" class="w3-button w3-black w3-block">
+                  Bestätigen
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Kontakt -->
     <section id="contact" class="content-main w3-container">
       <h2>Kontakt</h2>
-      <div class="w3-row">
+      <div id="rsvp" class="w3-row">
+        <div class="w3-container">
+          Bei Fragen oder Anmerkungen stehen wir euch gerne zur Verfügung!<br><br>
+          <div class="w3-half">
+            Anke<br>
+            Tel.: 0176 12345678<br>
+            <img src="../../images/wedding/jojo2.jpeg" class="imgage-round" style="width:180px"><br>
+          </div>
+          <div class="w3-half">
+            Lisa<br>
+            Tel.: 0176 12345678<br>
+            <img src="../../images/wedding/jojo2.jpeg" class="imgage-round" style="width:180px"><br>
+          </div>
+        </div>
       </div>
     </section>
 
 
     <!-- scripts -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
+    <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script> -->
+    <!-- <script src="js/map.js"></script> -->
+    <script src="js/rsvp.js"></script>
 </body>
 </html>

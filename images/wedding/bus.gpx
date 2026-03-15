@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx version="1.1" creator="https://www.komoot.de" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>From Neues Schloss Schleißheim to Kurfürst Restaurant</name>
+    <author>
+      <link href="https://www.komoot.de">
+        <text>komoot</text>
+        <type>text/html</type>
+      </link>
+    </author>
+  </metadata>
+  <trk>
+    <name>From Neues Schloss Schleißheim to Kurfürst Restaurant</name>
+    <trkseg>
+      <trkpt lat="48.250806" lon="11.560927">
+        <ele>484.752696</ele>
+        <time>2026-03-09T23:28:40.083Z</time>
+      </trkpt>
+      <trkpt lat="48.251745" lon="11.562571">
+        <ele>484.460287</ele>
+        <time>2026-03-09T23:29:11.215Z</time>
+      </trkpt>
+      <trkpt lat="48.251886" lon="11.562844">
+        <ele>484.336382</ele>
+        <time>2026-03-09T23:29:15.897Z</time>
+      </trkpt>
+      <trkpt lat="48.251913" lon="11.562980">
+        <ele>484.285487</ele>
+        <time>2026-03-09T23:29:17.813Z</time>
+      </trkpt>
+      <trkpt lat="48.251926" lon="11.563043">
+        <ele>484.261834</ele>
+        <time>2026-03-09T23:29:18.690Z</time>
+      </trkpt>
+      <trkpt lat="48.251932" lon="11.563276">
+        <ele>484.178212</ele>
+        <time>2026-03-09T23:29:21.819Z</time>
+      </trkpt>
+      <trkpt lat="48.251931" lon="11.563708">
+        <ele>484.023286</ele>
+        <time>2026-03-09T23:29:27.545Z</time>
+      </trkpt>
+      <trkpt lat="48.251930" lon="11.564285">
+        <ele>483.816359</ele>
+        <time>2026-03-09T23:29:35.099Z</time>
+      </trkpt>
+      <trkpt lat="48.251930" lon="11.564387">
+        <ele>483.781671</ele>
+        <time>2026-03-09T23:29:36.442Z</time>
+      </trkpt>
+      <trkpt lat="48.251924" lon="11.565191">
+        <ele>483.623690</ele>
+        <time>2026-03-09T23:29:47.296Z</time>
+      </trkpt>
+      <trkpt lat="48.251920" lon="11.565843">
+        <ele>483.495578</ele>
+        <time>2026-03-09T23:29:56.437Z</time>
+      </trkpt>
+      <trkpt lat="48.251919" lon="11.566154">
+        <ele>483.434471</ele>
+        <time>2026-03-09T23:30:00.910Z</time>
+      </trkpt>
+      <trkpt lat="48.251918" lon="11.566472">
+        <ele>483.371989</ele>
+        <time>2026-03-09T23:30:05.528Z</time>
+      </trkpt>
+      <trkpt lat="48.251905" lon="11.568073">
+        <ele>483.264285</ele>
+        <time>2026-03-09T23:30:29.422Z</time>
+      </trkpt>
+      <trkpt lat="48.251897" lon="11.569030">
+        <ele>483.274913</ele>
+        <time>2026-03-09T23:30:43.745Z</time>
+      </trkpt>
+      <trkpt lat="48.251892" lon="11.569616">
+        <ele>483.281421</ele>
+        <time>2026-03-09T23:30:52.517Z</time>
+      </trkpt>
+      <trkpt lat="48.251887" lon="11.570174">
+        <ele>483.192637</ele>
+        <time>2026-03-09T23:31:00.780Z</time>
+      </trkpt>
+      <trkpt lat="48.251877" lon="11.571178">
+        <ele>482.963289</ele>
+        <time>2026-03-09T23:31:15.330Z</time>
+      </trkpt>
+      <trkpt lat="48.251867" lon="11.572471">
+        <ele>482.667936</ele>
+        <time>2026-03-09T23:31:33.335Z</time>
+      </trkpt>
+      <trkpt lat="48.251859" lon="11.573519">
+        <ele>482.666225</ele>
+        <time>2026-03-09T23:31:46.246Z</time>
+      </trkpt>
+      <trkpt lat="48.251849" lon="11.575000">
+        <ele>482.666225</ele>
+        <time>2026-03-09T23:32:07.432Z</time>
+      </trkpt>
+      <trkpt lat="48.251816" lon="11.575756">
+        <ele>482.666225</ele>
+        <time>2026-03-09T23:32:19.546Z</time>
+      </trkpt>
+      <trkpt lat="48.251816" lon="11.575992">
+        <ele>482.666225</ele>
+        <time>2026-03-09T23:32:23.611Z</time>
+      </trkpt>
+      <trkpt lat="48.251811" lon="11.576349">
+        <ele>482.666225</ele>
+        <time>2026-03-09T23:32:29.980Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -23,3 +23,7 @@ Gemfile.lock
 
 # ignore the WIP
 andi/
+
+# ignore resources / generated files
+resource/*
+!resource
