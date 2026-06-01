@@ -184,8 +184,8 @@ function submitRSVP(){
   
     const diet = document.getElementById("diet").value;
     const notes = document.getElementById("notes").value;
-    const hotel = document.getElementById("hotel").value;
     const logistics = document.getElementById("logistics").value;
+    // const hotel = document.getElementById("hotel").value;
     // const music = document.getElementById("music").value;
     // const freitext1 = document.getElementById("freitext1").value;
 
@@ -222,8 +222,8 @@ function submitRSVP(){
     data.append("entry.293107771", selectedGuests);
     data.append("entry.1137159360", diet);
     data.append("entry.589649695", notes);
-    data.append("entry.530097932", hotel);
     data.append("entry.2129797273", logistics);
+    // data.append("entry.530097932", hotel);
     // data.append("entry.826715781", music);
     // data.append("entry.466768", freitext1);
   
