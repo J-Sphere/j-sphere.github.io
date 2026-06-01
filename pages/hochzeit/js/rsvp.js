@@ -173,15 +173,19 @@ function showGuests(guest){
 // Submit RSVP
 function submitRSVP(){
 
+    console.log("checking rsvp form");
     const code = document.getElementById("code").value;
   
+    console.log("looking for checked guests from code:", code);
     const selectedGuests =
       [...document.querySelectorAll('input[name="guestNames"]:checked')]
       .map(cb => cb.value)
       .join(", ");
 
+    console.log("found guests for code:", code);
     const possibleGuests = guests[code].names.join(", ");
-  
+
+    console.log("reading other fields");
     const diet = document.getElementById("diet").value;
     const notes = document.getElementById("notes").value;
     const logistics = document.getElementById("logistics").value;
@@ -194,7 +198,6 @@ function submitRSVP(){
   
     console.log(diet);
     console.log(notes);
-    console.log(hotel);
     console.log(logistics);
 
 
