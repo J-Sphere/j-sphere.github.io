@@ -171,3 +171,15 @@
     max-width: 100%;
     border: 1px solid black;
 }
+
+/* mobile: make half-columns stack vertically */
+@media screen and (max-width: 768px) {
+    .w3-half {
+        width: 100% !important;
+    }
+
+    .wedding-map-frame {
+        height: 250px;
+    }
+}
+
