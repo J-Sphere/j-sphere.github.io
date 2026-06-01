@@ -38,6 +38,12 @@ function turnOnVisibility(whichDiv) {
     } 
 } 
 
+// JavaScript to toggle the sidebar
+function toggleSidebar() {
+    const sidebar = document.getElementById('mySidebar');
+    sidebar.classList.toggle('active');
+}
+
 // Get invitation code from URL
 function getInvitationCode() {
 
@@ -177,29 +183,49 @@ function submitRSVP(){
     const possibleGuests = guests[code].names.join(", ");
   
     const diet = document.getElementById("diet").value;
-    const music = document.getElementById("music").value;
     const notes = document.getElementById("notes").value;
+    const hotel = document.getElementById("hotel").value;
+    const logistics = document.getElementById("logistics").value;
+    // const music = document.getElementById("music").value;
+    // const freitext1 = document.getElementById("freitext1").value;
 
     console.log(possibleGuests);
     console.log(selectedGuests);
   
+    console.log(diet);
+    console.log(notes);
+    console.log(hotel);
+    console.log(logistics);
+
+
     const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdQh1THKAsqMgfPTdNFLGlEA-nvCIPuhCjShdHTw20Boajh7g/formResponse";
   
     const data = new FormData();
     // From console -> network -> formResponse -> request
-    // code 1155634328
-    // all names 1379337105
-    // selected names 293107771
-    // diet 1137159360
-    // music 826715781
-    // notes 589649695
+
+    // Order:
+    // code, all names, selected names, diet, music, notes, hotel, logistics, freitext1
+    // {
+    // 	"entry.1155634328": "1",  // code 1155634328
+    // 	"entry.1379337105": "2",  // all names 1379337105
+    // 	"entry.293107771": "3",   // selected names 293107771
+    // 	"entry.1137159360": "4",  // diet 1137159360
+    // 	"entry.826715781": "5",   // music 826715781
+    // 	"entry.589649695": "6",   // notes 589649695
+    // 	"entry.530097932": "7",   // hotel 530097932
+    // 	"entry.2129797273": "8",  // logistics 2129797273
+    // 	"entry.466768": "9",      // freitext1 466768
+    // }
 
     data.append("entry.1155634328", code);
     data.append("entry.1379337105", possibleGuests);
     data.append("entry.293107771", selectedGuests);
     data.append("entry.1137159360", diet);
-    data.append("entry.826715781", music);
     data.append("entry.589649695", notes);
+    data.append("entry.530097932", hotel);
+    data.append("entry.2129797273", logistics);
+    // data.append("entry.826715781", music);
+    // data.append("entry.466768", freitext1);
   
     fetch(formURL,{
         method:"POST",

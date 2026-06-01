@@ -7,31 +7,33 @@
   <link rel="stylesheet" href="../../css/w3-theme.css">
   <link rel="stylesheet" href="../../css/wedding.css">
   <!-- from https://unpkg.com/leaflet/dist/leaflet.css -->
-  <link rel="stylesheet" href="../../css/leaflet.css"> 
+  <!-- <link rel="stylesheet" href="../../css/leaflet.css">  -->
 </head>
 
 <body>
+  <!-- Hamburger Button -->
+  <span class="hamburger w3-button w3-xlarge wedding-color-background-white" onclick="toggleSidebar()">Menu ☰</span>
 
   <!-- Sidebar -->
-  <nav class="w3-sidebar w3-bar-block w3-card w3-light-grey" style="width:220px">
-    <button class="w3-bar-item w3-button w3-large">Menu</button>
-    <a href="#home" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Home</a>
-    <a href="#location" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Hochzeitslocation</a>
-    <a href="#celebration" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Sektempfang & Feier</a>
-    <a href="#schedule" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Ablauf</a>
-    <a href="#rsvp" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Rückmeldung</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-text-gray" style="text-decoration:none;"><i class="fa fa-envelope"></i> Kontakt</a>
-  </nav>
-  
+  <nav id="mySidebar" class="menu-item w3-sidebar w3-bar-block w3-card wedding-color-light-gray" style="width:auto; right:0;">
+    <a href="#home" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Home</a>
+    <a href="#schedule" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Ablauf</a>
+    <a href="#location" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Hochzeitslocation</a>
+    <a href="#freizeit" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Freizeit</a>
+    <a href="#celebration" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Sektempfang & Feier</a>
+    <a href="#hotel-section" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Hotels</a>
+    <a href="#rsvp" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-party"></i> Rückmeldung</a>
+    <a href="#contact" class="w3-bar-item w3-button wedding-color-text-gray" style="text-decoration:none;"><i class="fa fa-envelope"></i> Kontakt</a>
+  </nav> 
 
   <!-- Main Content -->
   <section id="home">
-  <div style="margin-left:220px">
+  <div class="content-main w3-container">
     <div class="w3-row">
       <div class="w3-half hero">
           <!-- Background image left -->
       </div>
-      <div class="w3-half invite-card">
+      <div class="w3-half invite-card wedding-color-background-gray">
         <div class="invite-inner">
           <img src="../../images/wedding/flower.png" style="width:120px"><br>
           <h1>JAKOB</h1><br>
@@ -43,102 +45,348 @@
     </div>
   </div>
   </section>
+
+
+    <!-- Detailed Schedule -->
+    <section id="schedule" class="content-main w3-container">
+      <div class="w3-container w3-padding-16 wedding-color-light-gray">
+        <h2>Ablauf</h2>
+      </div>
+      <div class="w3-row">
+        <div class="w3-half w3-container">
+          Ablauf am Hochzeitstag (Samstag, 01.08.2026)<br><br>  
+          13:00 Uhr - Eintreffen vor dem Schloss Schleißheim<br>
+          13:30 Uhr - Trauung in der Maximilanskapelle<br>
+          15:00 Uhr - Gruppenfotos im Schlosspark<br>
+          15:30 Uhr - Fahrt zum Landhotel Hallnberg, kurze Pause für alle<br>
+          16:30 Uhr - Sektempfang und Schnittchen am Landhotel Hallnberg<br>
+          18:00 Uhr - Abendessen und Feier am Landhotel Hallnberg<br>
+          01:00 Uhr - Ende der Feier<br>
+        </div>
+      </div>
+    </section>
   
 
   <!-- Content about Location -->
   <section id="location" class="content-main w3-container">
-      <h2>Hochzeitslocation</h2>
-      <div class="w3-row">
+      <div class="w3-container w3-padding-16 wedding-color-light-gray">
+        <h2>Hochzeitslocation</h2>
+      </div>
+
+      <!-- First row -->
+      <div class="w3-row"> 
         <div class="w3-half w3-container">
-          <div class="w3-card-1">
-            <div class="w3-container">
-              <img class="w3-padding w3-image" src="../../images/wedding/kapelle.jpg" alt="Maximilanskapelle">
-              Maximilanskapelle, Neues Schloss Schleißheim<br>
-              Anreise mit dem Auto<br>
-                Parkplätze gibt es an der Schlosswirtschaft
-              Anreise mit dem ÖPNV<br>
-                S-Bahn: S1 Richtung Freising/Flughafen, Haltestelle Oberschleißheim<br>
-                Bus: 292 Richtung Garching-Forschungszentrum, Haltestelle Oberschleißheim Schloss<br>  
-                Zu Fuß von der S-Bahn Station Oberschleißheim braucht man etwa 20min.<br>  
-              Anreise zu Fuß aus Lustheim<br>
-                Durch den Schlosspark, vorbei am Schloss Lustheim<br>
-              Anreise mit dem Helikopter<br>
-                Flugplatz Schleißheim hat einen Hubschrauberlandeplatz, der nur wenige Minuten von der Kapelle entfernt ist
-            </div>
-          </div>
+          <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/schloss2.jpg" alt="Schloss Schleißheim">
         </div>
         <div class="w3-half w3-container">
-          <div class="w3-card-1">
-            <div class="w3-container">
-              <!-- Karte mit dem Schloss markiert -->
-              <!-- <div id="map"></div> -->
-            </div>
-          </div>
+          <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/kapelle.jpg" alt="Maximilanskapelle">
+        </div>
+      </div>
+
+      <!-- Second row -->
+      <div class="w3-row">
+        <div class="w3-half w3-container">
+          Maximilanskapelle, Neues Schloss Schleißheim<br>
+          <ul>
+            <li><i><b>Anreise mit dem Auto</b></i><br>  
+              Parkplätze gibt es an der Schlosswirtschaft
+          <li><i><b>Anreise mit dem ÖPNV</b></i><br>
+            S-Bahn: S1 Richtung Freising/Flughafen, Haltestelle Oberschleißheim<br>
+            Bus: 292 Richtung Garching-Forschungszentrum, Haltestelle Oberschleißheim Schloss<br>  
+            Zu Fuß von der S-Bahn Station Oberschleißheim braucht man etwa 20min.<br>  
+          <li><i><b>Anreise mit dem Helikopter</b></i><br>
+            Flugplatz Schleißheim hat einen Hubschrauberlandeplatz, der nur wenige Minuten von der Kapelle entfernt ist  
+          </ul>
+        </div>
+        <div class="w3-half w3-container">
+          <!-- Karte mit dem Schloss markiert -->
+          <!-- <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/MapSchleißheim.png" alt="Schloss Schleißheim"> -->
+           <iframe width=650 height=350 src="https://www.openstreetmap.org/export/embed.html?bbox=11.55641555786133%2C48.246045429823404%2C11.565588712692263%2C48.25163227041599&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=17/48.248839/11.561002">View Larger Map</a></small>
         </div>
       </div>
     </section>
+
+  <!-- Content about Schleißheim -->
+<section id="freizeit" class="content-main w3-container">
+ 
+  <!-- Abschnitt-Überschrift -->
+  <div class="w3-container w3-padding-16 wedding-color-light-gray">
+    <h2>Essens- und Freizeitmöglichkeiten in Schleißheim</h2>
+    <p>Zwischen Trauung und Abendfeier habt ihr ein paar schöne Stunden Zeit. Hier sind einige Ideen für Spaziergänge, Ausflüge und Einkehr in der Umgebung.</p>
+  </div>
+ 
+  <!-- ── AKTIVITÄTEN: 3 Spalten mit Foto oben ──────── -->
+ 
+  <!-- Bilder-Zeile -->
+  <div class="w3-row">
+    <div class="w3-third w3-container">
+      <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/schlossanlage2.jpg" alt="Schlosspark Schleißheim">
+    </div>
+    <div class="w3-third w3-container">
+      <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/regattastrecke.jpg" alt="Olympia-Regattasee Oberschleißheim">
+    </div>
+    <div class="w3-third w3-container">
+      <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/flugwerft2.jpg" alt="Flugwerft Schleißheim">
+    </div>
+  </div>
+ 
+  <!-- Text-Zeile zu den Aktivitäten -->
+  <div class="w3-row">
+    <div class="w3-third w3-container">
+      <p><i><b>Schlosspark-Spaziergang</b></i></p>
+      <p>
+        Der weitläufige Barockgarten mit seinem langen Mittelkanal lädt zu einem entspannten
+        Spaziergang ein vom Neuen Schloss bis zum Schloss Lustheim auf der Kanalinsel.
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p><i><b>Olympia-Regattasee</b></i></p>
+      <p>
+        Nur ca. 3 km vom Schloss entfernt liegt das Gelände der Olympischen Spiele 1972. 
+        Der 2,23 km lange See hat einen asphaltierten Rundweg gut geeignet zum Spazieren.
+      </p>
+    </div>
+    <div class="w3-third w3-container">
+      <p><i><b>Flugwerft Schleißheim</b></i></p>
+      <p>
+        Am ältesten Flugplatz Deutschlands befindet sich die Außenstelle des Deutschen Museums
+        mit historischen Flugzeugen und Helikoptern.<br>
+        <a href="https://www.deutsches-museum.de/flugwerft" target="_blank">deutsches-museum.de/flugwerft</a>
+      </p>
+    </div>
+  </div>
+ 
+  <!-- ── RESTAURANTS ──────────────────────────────────── -->
+ 
+  <!-- Trennüberschrift -->
+  <div class="w3-container w3-padding-16 wedding-color-light-gray">
+    <h3>Essen &amp; Trinken</h3>
+  </div>
+ 
+  <!-- Restaurant-Zeile 1 -->
+  <div class="w3-row">
+    <div class="w3-half w3-container">
+      <p><i><b>Café zum Schloss</b></i><br>
+        <i>Café &middot; nahe Neues Schloss</i>
+      </p>
+      <p>
+        Leichte Gerichte und Kuchen in einem kleinen, hellen Café mit charmantem, nostalgischem Flair.
+      </p>
+    </div>
+    <div class="w3-half w3-container">
+      <p><i><b>Fliegergarten</b></i><br>
+        <i>Bayerisch &amp; mediterran &middot; Biergarten am Flugplatz</i>
+      </p>
+      <p>
+        Gemütlicher Biergarten direkt am Flugplatz Schleißheim mit Blick auf
+        Sportflieger und Helikopter. Bayerische Schmankerl, Tagesgerichte und
+        kühle Getränke.<br>
+        <a href="https://fliegergarten.de" target="_blank">fliegergarten.de</a>
+      </p>
+    </div>
+  </div>
+ 
+  <!-- Restaurant-Zeile 2 -->
+  <div class="w3-row">
+    <div class="w3-half w3-container">
+      <p><i><b>Schlosswirtschaft Schleißheim</b></i><br>
+        <i>Bayerisch-österreichische Küche &middot; Biergarten &middot; direkt am Schloss</i>
+      </p>
+      <p>
+        Das historische Gasthaus direkt am Neuen Schloss mit einem schönen Biergarten mit Schlossblick. <br>
+        Tel. (Reservierung) 089 / 600 13 695 &nbsp;&middot;&nbsp;
+        <a href="https://schlosswirtschaft-schleissheim.de" target="_blank">schlosswirtschaft-schleissheim.de</a>
+      </p>
+    </div>
+
+    <div class="w3-half w3-container">
+      <p><i><b>Weitere Möglichkeiten im Ort</b></i><br>
+        <i>Italienisch &middot; Asiatisch &middot; und mehr</i>
+      </p>
+      <p>
+        Oberschleißheim bietet auch internationale Küche:
+        die <i>Osteria del Duca</i> (authentisch italienisch, familienfreundlich),
+        <i>Com Viet</i> (vietnamesisch, sehr beliebt) und
+        <i>Monte del Sol</i> (Pizza &amp; Pasta).<br>
+        <a href="https://www.tripadvisor.de/Restaurants-g1587165-Oberschleissheim.html" target="_blank">Überblick auf TripAdvisor</a>
+      </p>
+    </div>
+  </div>
+ 
+  <!-- ── KARTE & HINWEISE ─────────────────────────────── -->
+ 
+  <div class="w3-row">
+    <!-- Karte -->
+    <div class="w3-half w3-container">
+      <iframe
+        title="Karte Oberschleißheim Umgebung"
+        width="650" height="350"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=11.52%2C48.225%2C11.59%2C48.275&amp;layer=mapnik"
+        style="border: 1px solid black">
+      </iframe><br>
+      <small><a href="https://www.openstreetmap.org/?#map=14/48.2488/11.5610" target="_blank">Größere Karte anzeigen</a></small>
+    </div>
+ 
+    <!-- Hinweise -->
+    <div class="w3-half w3-container">
+      <p><i><b>Hinweise</b></i></p>
+      <ul>
+        <li>
+          <i><b>Tischreservierung</b></i><br>
+          In der Schlosswirtschaft wird eine Reservierung empfohlen,
+          besonders am Wochenende.
+        </li>
+        <li>
+          <i><b>Eintritt Schlosspark</b></i><br>
+          Der Park ist kostenlos zugänglich; für die Schlösser und Galerien
+          wird Eintritt erhoben.
+        </li>
+        <li>
+          <i><b>Rundweg Regattasee</b></i><br>
+          Ca. 5 km, vollständig asphaltiert.
+        </li>
+      </ul>
+    </div>
+  </div>
+ 
+</section>
 
     <!-- Content about Celebration Location -->
     <section id="celebration" class="content-main w3-container">
-      <h2>Sektempfang und Feier</h2>
-      <div class="w3-row">
+      <div class="w3-container w3-padding-16 wedding-color-light-gray">
+        <h2>Sektempfang und Feier</h2>
+      </div>
+
+      <!-- First row, two images -->
+      <div class="w3-row"> 
         <div class="w3-half w3-container">
+          <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/BungalowGallierie.jpg" alt="BungalowGallierie">
+        </div>
+        <div class="w3-half w3-container">
+          <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/BungalowTerrace.jpg" alt="BungalowTerrace">
+        </div>
+      </div>
+
+      <!-- Second row, link to Kurfuerst -->
+      <div class="w3-row"> 
+        <p> Landhotel Hallnberg, <a href="https://www.landhotel-hallnberg.de">Hallnberg bei Walpertskirchen</a></p>
+      </div>
+
+      <!-- Third row, Menu left, picture right -->
+      <div class="w3-row"> 
+        <div class="w3-half w3-container">
+          <div class = "w3-container w3-col"  style="width:50%">
+            <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/jojo.jpeg" alt="jojo"><br>
+          </div>
+          <div class = "w3-container w3-col" style="width:50%">
+            <p>
+              Unser Hochzeitsmenü<br>
+              <ul>
+                <li><i><b>Vorspeise</b></i><br>  
+                  Erdbeer-Feta-Salat <br></li>
+                <li><i><b> Hauptgang (Variante 1)</b></i><br>
+                  Rosa gebratenes Kalbsfilet <br></li>
+                <li><i><b> Hauptgang (Variante 2, vegetarisch)</b></i><br>
+                  Ofensüßkartoffel mit Avocado/Granatapfel <br></li>
+                <li><i><b>Nachspeise</b><br></i>
+                  Flying Dessertbuffet <br></li>
+                <li><i><b>Mitternachtssnack </b><br></i>
+                  Chili con Carne <br></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="w3-half w3-container">
+          <iframe width=650 height=350 src="https://www.openstreetmap.org/export/embed.html?bbox=11.983187198638916%2C48.24786993475382%2C11.99236035346985%2C48.25345657603665&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=17/48.250663/11.987774">View Larger Map</a></small>
+          <!-- <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/BungalowWide.jpg" alt="Bungalow"> -->
+        </div>
+      </div>
+
+
+    </section>
+
+    <section id="hotel-section" class="content-main w3-container">
+      <div class="w3-container w3-padding-16 wedding-color-light-gray">
+        <h2>Hotels</h2>
+      </div>
+
+      <!-- First row -->
+      <div class="w3-row"> 
+        <div class="w3-third w3-container">
           <div class="w3-card-1">
             <div class="w3-container">
-              <img class="w3-padding w3-image" src="../../images/wedding/kurfuerst.svg" alt="Maximilanskapelle">
-              <p> Restaurant Kurfürst, <a href="https://www.kurfuerst.restaurant/">Lustheim</a></p>
+              <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/HallnbergKomfort.jpg" alt="HotelFoto">
+              <p><b>Hotel Hallnberg</b><br>
+                Adresse: Hallnberg 2, 85469 Walpertskirchen<br>
+                Entfernung zur Trauung: 35 min (Auto)<br>
+                Entfernung zur Feier: Vorort<br>
+                Preis: ab 120€ pro Nacht<br>
+                <b>Anmerkung</b> ~10 DZ sind für die Hochzeit reserviert<br>
+                Kontaktiert uns, wenn ihr Interesse an einem Zimmer habt!<br> 
+                Link: <a href="www.landhotel-hallnberg.de/hotel">www.landhotel-hallnberg.de/hotel</a><br>
             </div>
           </div>
         </div>
-
-      </div>
-    </section>
-
-    <!-- Detailed Schedule -->
-    <section id="schedule" class="content-main w3-container">
-      <h2>Ablauf</h2>
-      <div class="w3-row">
-        <div class="w3-half w3-container">
-          Ablauf am Hochzeitstag<br><br>  
-          14:00 Uhr - Trauung in der Maximilanskapelle<br>
-          15:00 Uhr - Sektempfang im Schlosspark<br>
-          16:00 Uhr - Gruppenfotos im Schlosspark<br>
-          17:00 Uhr - Fahrt zum Restaurant Kurfürst<br>
-          18:00 Uhr - Abendessen und Feier im Restaurant Kurfürst<br>
-          00:00 Uhr - Ende der Feier<br>
+        <div class="w3-third w3-container">
+          <div class="w3-card-1">
+            <div class="w3-container">
+              <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/Zehmerhof.jpg" alt="Hotel">
+              <p><b>Gästehaus Zehmerhof</b><br>
+                Adresse: Hauptstraße 7A, 85469 Walpertskirchen <br>
+                Entfernung zur Trauung: 35 min (Auto)<br>
+                Entfernung zur Feier: 3 min (Auto)<br>
+                Preis: ab 140€ (DZ) pro Nacht<br>
+            </div>
+          </div>
+        </div>
+        <div class="w3-third w3-container">
+          <div class="w3-card-1">
+            <div class="w3-container">
+              <img class="w3-padding w3-image" style="width:100%" src="../../images/wedding/Movenpick.jpg" alt="Hotel">
+              <p><b>Mövenpick Hotel Hallbergmoos</b><br>
+                Adresse: Ludwigstraße 43, 85399 Hallbergmoos<br>
+                Entfernung zur Trauung: 20 min (Auto)<br>
+                Entfernung zur Feier: 20 min (Auto)<br>
+                Preis: ab 100€ (DZ) pro Nacht<br>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+
+
 
 
     <!-- Rueckmeldung -->
     <section id="rsvp" class="content-main w3-container">
-      <h2>Rückmeldung</h2>
+      <div class="w3-container w3-padding-16 wedding-color-light-gray">
+        <h2>Rückmeldung</h2>
+      </div>
 
       <div id="rsvp" class="w3-row">
-        <div class="w3-container">
-          <div class="w3-card w3-padding w3-dark-grey">
+        <div class="w3-container w3-padding-16">
+          <div class="w3-card w3-padding wedding-color-dark-gray">
             <h3 class="w3-left-align">Rückmeldung online abgeben</h3>
-            <p id="error" class="w3-text-red"></p>
+            <p id="error" class="wedding-color-text-red"></p>
             <form id="rsvpForm">
               <div id="codeArea">
                 Code auf der Einladung<br>
-                <input id="code" class="w3-input w3-border">
-                <button id="checkCode" type="submit" class="w3-button w3-margin-top w3-black">
+                <input id="code" class="w3-input w3-border" placeholder="Einladungscode">
+                <button id="checkCode" type="submit" class="w3-button w3-margin-top wedding-color-black">
                   Check Code
                 </button>
               </div>
               <div id="formArea" style="display:none">
                 <div id="guestList" class="w3-margin-bottom"></div>
-                <br><br>
-                Vegetarisch / Vegan / etc. ?
-                <input id="diet" class="w3-input w3-border">
-                Musikwünsche
-                <input id="music" class="w3-input w3-border">
+                <br> Menüwunsche
+                <input id="diet" class="w3-input w3-border" placeholder="Fleisch / Vegetarisch / Allergien / Besondere Ernährungsweise">
+                Ich komme / wir kommen mit ...
+                <input id="logistics" class="w3-input w3-border" placeholder="ÖPNV / Auto (falls mit dem Auto, wie viele Personen kann ich mitnehmen?)">
+                <!-- Ich brauche / wir brauchen ein Hotelzimmer
+                <input id="hotel" class="w3-input w3-border" placeholder="Ja / Nein (falls Ja, wie viele und welche Zimmer?)"> -->
                 Anmerkungen
-                <textarea id="notes" class="w3-input w3-border"></textarea>
+                <textarea id="notes" class="w3-input w3-border" placeholder="Anmerkungen"></textarea>
                 <br>
-                <button id="confirmRSVP" class="w3-button w3-black w3-block">
+                <button id="confirmRSVP" class="w3-button wedding-color-black w3-block">
                   Bestätigen
                 </button>
               </div>
@@ -151,19 +399,24 @@
 
     <!-- Kontakt -->
     <section id="contact" class="content-main w3-container">
-      <h2>Kontakt</h2>
+      <div class="w3-container w3-padding-16 wedding-color-light-gray">
+        <h2>Kontakt</h2>
+      </div>
       <div id="rsvp" class="w3-row">
         <div class="w3-container">
-          Bei Fragen oder Anmerkungen stehen wir euch gerne zur Verfügung!<br><br>
+          Bei Fragen oder Anmerkungen stehen wir oder unsere Trauzeuginnen euch gerne zur Verfügung!<br>
+          Auch Programmvorschläge oder Musikwünsche könnt ihr gerne den Trauzeugen mitteilen! <br>
           <div class="w3-half">
             Anke<br>
-            Tel.: 0176 12345678<br>
-            <img src="../../images/wedding/jojo2.jpeg" class="imgage-round" style="width:180px"><br>
+            Tel.: (Siehe Einladung)<br>
+            Email: <a href="mailto:TrauzeugenSaraJakob@gmail.com">TrauzeugenSaraJakob@gmail.com</a><br>
+            <img src="../../images/wedding/Anke2.jpeg" class="imgage-round" style="width:180px"><br>
           </div>
           <div class="w3-half">
             Lisa<br>
-            Tel.: 0176 12345678<br>
-            <img src="../../images/wedding/jojo2.jpeg" class="imgage-round" style="width:180px"><br>
+            Tel.: (Siehe Einladung)<br>
+            Email: <a href="mailto:TrauzeugenSaraJakob@gmail.com">TrauzeugenSaraJakob@gmail.com</a><br>
+            <img src="../../images/wedding/Empty2.jpg" class="imgage-round" style="width:180px"><br>
           </div>
         </div>
       </div>
@@ -171,7 +424,7 @@
 
 
     <!-- scripts -->
-    <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script> -->
     <!-- <script src="js/map.js"></script> -->
     <script src="js/rsvp.js"></script>
