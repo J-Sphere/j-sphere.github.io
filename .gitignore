@@ -27,3 +27,5 @@ andi/
 # ignore resources / generated files
 resource/*
 !resource
+!resource/wedding/
+!resource/wedding/Programmheft.pdf
